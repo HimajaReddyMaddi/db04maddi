@@ -1,5 +1,5 @@
 # fwb04maddi
-[herokulocal](https://dashboard.heroku.com/apps/fwb04maddi)
+[herokulocal](https://fwb04maddi.herokuapp.com/)
 
 Class Name: Mat
 
