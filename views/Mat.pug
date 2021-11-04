@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h1= title
+  p Mat results
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let details = [
+                    {
+                        "color": "Blue",
+                        "length": "10",
+                        "cost": 100
+                    },
+                    {
+                       "color": "Orange",
+                        "length": "15",
+                        "cost": 110
+                    },
+                    {
+                       "color": "Green",
+                        "length": "15",
+                        "cost": 150
+                    },                   
+                ]
+            each c,index in details
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.color}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.length}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{c.cost}
+
+                script.                
+                      function buy(itemNo)
+                      {
+                            alert(`You purchased item ${itemNo+1}`)
+                      }
