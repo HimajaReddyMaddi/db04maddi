@@ -9,11 +9,53 @@ mongoose = require('mongoose');
 mongoose.connect(connectionString,
 {useNewUrlParser: true, useUnifiedTopology: true});
 
+// server start
+async function recreateDB() {
+  // Delete everything
+  await mat.deleteMany();
+  let instance1 = new
+  mat({
+    "color": "Blue",
+    "length": "10",
+    "cost": 100
+  });
+  let instance2 = new
+  mat({
+    "color": "Orange",
+    "length": "15",
+    "cost": 110
+  });
+  let instance3 = new
+  mat({
+    "color": "Green",
+    "length": "15",
+    "cost": 150
+  });  
+  instance1.save(function (err, doc) {
+    if (err) return console.error(err);
+    console.log("First object saved")
+  });
+  instance2.save(function (err, doc) {
+    if (err) return console.error(err);
+    console.log("Second object saved")
+  });
+  instance3.save(function (err, doc) {
+    if (err) return console.error(err);
+    console.log("Third object saved")
+  });
+}
+
+let reseed = true;
+if (reseed) {
+  recreateDB();
+}
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var matRouter = require('./routes/Mat');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
+var mat = require("./models/Mat");
 
 var app = express();
 
@@ -32,6 +74,7 @@ app.use('/users', usersRouter);
 app.use('/Mat', matRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
+app.use('/Mat', matr);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
