@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mat = require("./models/Mat");
 
 const connectionString = process.env.MONGO_CON
 mongoose = require('mongoose');
@@ -55,7 +56,7 @@ var usersRouter = require('./routes/users');
 var matRouter = require('./routes/Mat');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
-var mat = require("./models/Mat");
+
 
 var app = express();
 
@@ -74,7 +75,7 @@ app.use('/users', usersRouter);
 app.use('/Mat', matRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
-app.use('/Mat', matr);
+//app.use('/Mat', matr);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
