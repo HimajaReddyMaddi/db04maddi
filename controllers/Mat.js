@@ -15,7 +15,7 @@ exports.mat_create_post = async function (req, res) {
     // We are looking for a body, since POST does not have query parameters.
     // Even though bodies can be in many different formats, we will be picky
     // and require that it be a json object
-    // {"gas_type":"regular", "quantity":13, "cost":43.56}
+    
     document.mat_type = req.body.gas_type;
     document.quantity = req.body.quantity;
     document.cost = req.body.cost;
@@ -27,13 +27,13 @@ exports.mat_create_post = async function (req, res) {
         res.send(`{"error": ${err}}`);
     }
 };
-// Handle Gas delete form on DELETE.
+// Handle Mat delete form on DELETE.
 exports.mat_delete = function (req, res) {
-    res.send('NOT IMPLEMENTED: Gas delete DELETE ' + req.params.id);
+    res.send('NOT IMPLEMENTED: Mat delete DELETE ' + req.params.id);
 };
-// Handle Gas update form on PUT.
+// Handle Mat update form on PUT.
 exports.mat_update_put = function (req, res) {
-    res.send('NOT IMPLEMENTED: Gas update PUT' + req.params.id);
+    res.send('NOT IMPLEMENTED: Mat update PUT' + req.params.id);
 };
 
 // List of all mats
