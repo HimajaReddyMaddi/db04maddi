@@ -8,7 +8,7 @@ exports.mat_list = function (req, res) {
 exports.mat_detail = function (req, res) {
     res.send('NOT IMPLEMENTED: Gas detail: ' + req.params.id);
 };
-// Handle Gas create on POST.
+// Handle mat create on POST.
 exports.mat_create_post = async function (req, res) {
     console.log(req.body)
     let document = new Mat();
