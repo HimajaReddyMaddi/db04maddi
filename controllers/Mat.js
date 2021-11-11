@@ -16,8 +16,8 @@ exports.mat_create_post = async function (req, res) {
     // Even though bodies can be in many different formats, we will be picky
     // and require that it be a json object
     
-    document.mat_type = req.body.gas_type;
-    document.quantity = req.body.quantity;
+    document.color = req.body.color;
+    document.length = req.body.length;
     document.cost = req.body.cost;
     try {
         let result = await document.save();
