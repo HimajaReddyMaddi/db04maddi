@@ -1,6 +1,7 @@
 var express = require('express');
-const gas_controllers= require('../controllers/Mat');
+const mat_controllers= require('../controllers/Mat');
 var router = express.Router();
 /* GET costumes */
-router.get('/', gas_controllers.Mat_view_all_Page );
+router.get('/', mat_controllers.Mat_view_all_Page );
+router.get('/Mat/:id', mat_controllers.mat_detail);
 module.exports = router;

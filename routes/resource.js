@@ -17,4 +17,6 @@ router.put('/resource/Mat/:id', mat_controller.mat_update_put);
 router.get('/resource/Mat/:id', mat_controller.mat_detail);
 // GET request for list of all gas items.
 router.get('/resource/Mat', mat_controller.mat_list);
+
+//router.post('/resource/Mat', mat_controller.mat_update_put);
 module.exports = router;
