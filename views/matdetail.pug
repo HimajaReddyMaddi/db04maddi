@@ -1,0 +1,20 @@
+extends layout
+block content
+  h1= title
+  - let matid = toShow._id
+  - let color = toShow.color
+  - let length = toShow.length
+  - let cost = toShow.cost
+  div
+    div.row
+      div(class='matAttr mr-3') Mat ID is:
+      div #{matid}
+    div.row
+      div(class='matAttr mr-3') Mat Type is:
+      div #{color}
+    div.row
+      div(class='matAttr mr-3') Mat Size is:
+      div #{length}
+    div.row
+      div(class='matAttr mr-3') Mat Cost is:
+      div #{cost}
