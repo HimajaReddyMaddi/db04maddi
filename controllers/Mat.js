@@ -92,3 +92,16 @@ exports.mat_detail = async function(req, res) {
     failed`);
     }
     };
+
+    // Handle Costume delete on DELETE.
+exports.mat_delete = async function(req, res) {
+    console.log("delete " + req.params.id)
+    try {
+    result = await Mat.findByIdAndDelete( req.params.id)
+    console.log("Removed " + result)
+    res.send(result)
+    } catch (err) {
+    res.status(500)
+    res.send(`{"error": Error deleting ${err}}`);
+    }
+    };
