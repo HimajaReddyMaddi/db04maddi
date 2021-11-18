@@ -10,4 +10,6 @@ router.get('/detail', mat_controllers.mat_view_one_Page);
 router.get('/create', mat_controllers.mat_create_Page);
 /* GET create update page */
 router.get('/update', mat_controllers.mat_update_Page);
+/* GET create costume page */
+router.get('/delete', mat_controllers.mat_delete_Page);
 module.exports = router;
