@@ -12,10 +12,10 @@ block content
   form(id='MatForm', action= actionid, method="PUT")
     div.form-group
       label.matAttr(for='color') Mat color
-      input#color(type='text', name='color', value= color )
+      input#color(type='text', name='color', value= color, maxlength="6", minlength="3")
     div.form-group
       label.matAttr(for='length') Mat length
-      input#length(type='text', name='length', value= length )
+      input#length(type='text', name='length', value= length, min="2", max="100")
     div.form-group
       label.matAttr(for='cost') Mat cost
       input#cost(type='number', name='cost', value= cost )

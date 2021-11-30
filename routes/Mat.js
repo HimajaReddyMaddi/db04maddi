@@ -12,4 +12,6 @@ router.get('/create', mat_controllers.mat_create_Page);
 router.get('/update', mat_controllers.mat_update_Page);
 /* GET create costume page */
 router.get('/delete', mat_controllers.mat_delete_Page);
+/* GET update costume page */
+router.get('/update', mat_controllers.mat_update_Page);
 module.exports = router;
